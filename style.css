@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background: url(./images/bg-pattern.svg);
+  background-color: hsl(230, 100%, 99%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: top;
+}
+
+main {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  font-size: 15px;
+  margin-block: 3rem;
+  padding: 3rem 0rem;
+  background: url(./images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: contain;
+}
+
+h1 {
+  color: hsl(227, 35%, 25%);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+header p {
+  color: hsl(225, 20%, 60%);
+  font-weight: 600;
+}
+
+.totalsection {
+  background-color: #fff;
+  height: 350px;
+  padding: 2rem;
+  box-shadow: 0px 3px 10px hsl(227, 35%, 25%, 0.3);
+}
+
+.pricesection {
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 225px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr;
+}
+
+.pages {
+  align-self: center;
+  font-size: 1rem;
+}
+
+.pages h2 {
+  text-transform: uppercase;
+  color: hsl(225, 20%, 60%);
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+}
+
+.priceper {
+  color: hsl(225, 20%, 60%);
+  font-size: 1rem;
+  place-self: center;
+}
+
+.price {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.inputbar {
+  grid-column: span 2;
+}
+
+.pricerange {
+  appearance: none;
+  width: 100%;
+  /* background: hsl(174, 77%, 80%); */
+  background: linear-gradient(
+    90deg,
+    hsl(174, 86%, 45%) 50%,
+    hsl(174, 77%, 80%) 50%
+  );
+  opacity: 0.7;
+  outline: none;
+  height: 12px;
+  transition: opacity 0.4s;
+  border-radius: 5px;
+  /* overflow: hidden;   */
+}
+
+.pricerange:hover {
+  opacity: 1;
+}
+
+.pricerange::-webkit-slider-thumb {
+  cursor: pointer;
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: hsl(174, 86%, 45%);
+  background-image: url(./images/icon-slider.svg), url(./images/icon-slider.svg);
+  background-position: left 10px center, right 10px center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 50%, 50%;
+}
+
+.pricerange::-webkit-slider-runnable-track {
+  /* height: 12px; */
+  -webkit-appearance: none;
+  color: black;
+  /* background-color: black; */
+  /* margin-top: -1px; */
+}
+
+.billing {
+  display: flex;
+  grid-column: span 2;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.month {
+  color: hsl(225, 20%, 60%);
+  font-size: 0.8rem;
+}
+
+.year {
+  color: hsl(225, 20%, 60%);
+  font-size: 0.8rem;
+}
+
+.discount {
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+}
+
+hr {
+  height: 1px;
+  opacity: 0.5;
+}
+
+.footer {
+  display: flex;
+  height: 93px;
+}
+
+.services {
+  width: 50%;
+  align-self: center;
+}
+
+.services > p {
+  color: hsl(225, 20%, 60%);
+  font-size: 0.75rem;
+  margin-block: 0.4rem;
+}
+
+.trailbutton {
+  width: 50%;
+  align-self: center;
+  margin-left: 1.5rem;
+}
+
+.trial {
+  cursor: pointer;
+  background-color: hsl(227, 35%, 25%);
+  color: #fff;
+  padding: 0.5rem 3rem;
+  border-radius: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media (max-width: 800px) {
+  .totalsection {
+    height: 425px;
+    padding: 1.5rem;
+  }
+
+  main {
+    width: 350px;
+  }
+
+  header {
+    margin-block: 3rem 1.5rem;
+  }
+
+  header p {
+    padding: 0 4.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .pricesection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "pages"
+      "inputbar"
+      "priceper";
+  }
+
+  .pages {
+    grid-area: pages;
+    justify-self: center;
+  }
+
+  .priceper {
+    grid-area: priceper;
+  }
+  .inputbar {
+    grid-area: inputbar;
+    align-self: center;
+  }
+
+  .pages,
+  .priceper {
+    grid-column: span 2;
+  }
+
+  .billing {
+    padding: 0;
+    align-self: center;
+  }
+
+  .month,
+  .year {
+    font-size: 0.6rem;
+  }
+
+  .footer {
+    height: 136px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .services > p {
+    font-size: 0.8rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .trial {
+    padding: 0.5rem 1.5rem;
+    /* margin: 0 auto; */
+  }
+}
