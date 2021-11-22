@@ -95,7 +95,6 @@ header p {
 .pricerange {
   appearance: none;
   width: 100%;
-  /* background: hsl(174, 77%, 80%); */
   background: linear-gradient(
     90deg,
     hsl(174, 86%, 45%) 50%,
@@ -106,7 +105,6 @@ header p {
   height: 12px;
   transition: opacity 0.4s;
   border-radius: 5px;
-  /* overflow: hidden;   */
 }
 
 .pricerange:hover {
@@ -124,14 +122,6 @@ header p {
   background-position: left 10px center, right 10px center;
   background-repeat: no-repeat, no-repeat;
   background-size: 50%, 50%;
-}
-
-.pricerange::-webkit-slider-runnable-track {
-  /* height: 12px; */
-  -webkit-appearance: none;
-  color: black;
-  /* background-color: black; */
-  /* margin-top: -1px; */
 }
 
 .billing {
